@@ -1,0 +1,37 @@
+# Main Configuration
+
+cudaDevice: 0
+
+envCheck: False
+
+Model:
+  method: 'ECRL'
+  obsType: 'Image'
+  obsMode: 'dlp'
+  numViews: 2
+  ChamferReward: False
+  latentRepPath: 'latent_rep_chkpts/dlp_push_5C'
+
+Reward:
+  GT:
+    reward_scale: 2.0
+    dist_threshold: 0.04  # effective radius of cube
+    ori_threshold: 0.3  # ~17 degrees
+
+  Chamfer:
+    reward_scale: 2.0
+    dist_norm: 1
+    chamfer_metric: 'l2_simple'
+    latent_dist_threshold: 6  # empirical
+
+  LatentClassifier:
+    path: 'latent_classifier_chkpts'
+    params:
+      latent_vis_feature_dim: 4
+      h_dim: 128
+      n_hidden_layers: 3
+
+Evaluation:
+  numEvalEpisodes: 16
+  maxEvalEpisodeLen: 300
+  SMORLMetaNumSteps: 15

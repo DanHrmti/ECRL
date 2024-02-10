@@ -1,0 +1,52 @@
+{
+  "ds": "panda",
+  "batch_size": 64,
+  "lr": 0.0002,
+  "kp_activation": "tanh",
+  "pad_mode": "replicate",
+  "num_epochs": 250,
+  "n_kp": 1,
+  "recon_loss_type": "mse",
+  "sigma": 1.0,
+  "beta_kl": 0.1,
+  "beta_rec": 1.0,
+  "patch_size": 16,
+  "topk": 10,
+  "n_kp_enc": 20,
+  "eval_epoch_freq": 1,
+  "learned_feature_dim": 4,
+  "bg_learned_feature_dim": 1,
+  "n_kp_prior": 32,
+  "weight_decay": 0.0,
+  "kp_range": [
+    -1,
+    1
+  ],
+  "run_prefix": "0.25anchor_20kp_32kpp_4zdim",
+  "warmup_epoch": 1,
+  "iou_thresh": 0.15,
+  "anchor_s": 0.25,
+  "kl_balance": 0.001,
+  "milestones": [
+    20,
+    40,
+    80
+  ],
+  "image_size": 128,
+  "cdim": 3,
+  "enc_channels": [
+    32,
+    64,
+    128
+  ],
+  "prior_channels": [
+    16,
+    32,
+    64
+  ],
+  "scale_std": 0.3,
+  "offset_std": 0.2,
+  "obj_on_alpha": 0.1,
+  "obj_on_beta": 0.1,
+  "use_correlation_heatmaps": false
+}

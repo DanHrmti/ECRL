@@ -1,0 +1,56 @@
+# Main Configuration
+
+cudaDevice: 0
+
+collectData: False
+collectDataNumTimesteps: 300_000
+envCheck: False
+
+WANDB:
+  log: True
+  logPolicyStats: False  # setting to False significantly accelerates training
+  episodeVisFreq: 800
+
+Model:
+  method: 'ECRL'  # ['ECRL', 'SMORL']
+  obsType: 'Image'  # ['State', 'Image']
+  obsMode: 'dlp'  # ['state', 'dlp']
+  numViews: 2
+  ChamferReward: False
+  latentRepPath: 'latent_rep_chkpts/dlp_push_5C'
+
+Reward:
+  GT:
+    reward_scale: 2.0
+    dist_threshold: 0.04  # effective radius of cube
+
+  Chamfer:
+    reward_scale: 2.0
+    dist_norm: 1
+    chamfer_metric: 'l2_simple'
+    latent_dist_threshold: 6  # empirical
+
+  LatentClassifier:
+    path: 'latent_classifier_chkpts'
+    params:
+      latent_vis_feature_dim: 4
+      h_dim: 128
+      n_hidden_layers: 3
+
+Training:
+  learningRate: 0.0005
+  batchSize: 512
+  tau: 0.05
+  gamma: 0.98
+  actionRegCoefficient: 1.0
+  bufferSize: [100_000, 100_000, 200_000]
+  totalTimesteps: [480_000, 3_000_000, 6_000_000]
+  epochEpisodes: 800
+  warmupEpisodes: 64
+  utdRatio: 0.5
+  actionNoiseSigma: 0.2
+  explorationEpsilon: 0.3
+
+Evaluation:
+  numEvalEpisodes: 100
+  SMORLMetaNumSteps: 15

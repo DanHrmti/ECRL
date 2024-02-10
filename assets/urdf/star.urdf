@@ -1,0 +1,38 @@
+<robot name="star">
+
+  <link name="star">
+
+    <collision>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" />
+      <material name="c">
+        <color rgba="0.6 0.1 0.0 1.0" />
+      </material>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0.7854" />
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0.7854"/>
+      <material name="c">
+        <color rgba="0.6 0.1 0.0 1.0" />
+      </material>
+      <geometry>
+        <box size="0.03 0.03 0.03" />
+      </geometry>
+    </visual>
+
+  </link>
+</robot>

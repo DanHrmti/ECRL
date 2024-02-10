@@ -1,0 +1,69 @@
+# Environment and Simulation Configuration
+
+name: PandaPush
+
+physics_engine: 'physx'
+
+# if given, will override the device setting in gym. 
+env:
+  numEnvs: 16  # should be equal to the number of episodes collected before each policy update
+  envSpacing: 1.5
+  episodeLength: [30, 50, 100]  # [1C, 2C, 3C]
+
+  clipObservations: 1.1
+  clipActions: 1.0
+  actionScale: 1.0
+
+  startPositionNoise: 0.0
+  startRotationNoise: 0.0
+  frankaPositionNoise: 0.0
+  frankaRotationNoise: 0.0
+  frankaDofNoise: 0.0
+
+  aggregateMode: 3
+
+  controlType: osc
+  controlFrequency: 3  # Hz
+
+  tableDims: [0.5, 0.6, 0.05]
+  tablePos: [0.0, 0.0, 1.0]
+  cubeSize: 0.035
+  numObjects: 3
+  numColors: 6
+
+  RandColor: True
+  RandNumObj: False  # set to True for training on mixture of episodes containing: #objects <= 'numObjects'
+  RandNumObjDist: [0.3, 0.3, 0.4]
+
+  asset:
+    assetRoot: "assets"
+    assetFileNameFranka: "urdf/franka_description/robots/franka_panda_gripper.urdf"
+
+  enableDebugVis: False
+  enableCameraSensors: True  # set to True if using camera sensors in the environment
+  cameraRes: 128
+  cameraSupersampleRatio: 2
+
+sim:
+  dt: 0.01667 # = 1/60, sim interaction frequency is 60 Hz
+  substeps: 2 # sim dt is effectively 120 Hz
+  up_axis: "z"
+  use_gpu_pipeline: True
+  gravity: [0.0, 0.0, -9.81]
+  physx:
+    num_threads: 4
+    solver_type: 1
+    use_gpu: True # set to False for CPU
+    num_position_iterations: 8
+    num_velocity_iterations: 1
+    contact_offset: 0.005
+    rest_offset: 0.0
+    bounce_threshold_velocity: 0.2
+    max_depenetration_velocity: 1000.0
+    default_buffer_size_multiplier: 5.0
+    max_gpu_contact_pairs: 1048576 # 1024*1024
+    num_subscenes: 4
+    contact_collection: 0 # 0: CC_NEVER (don't collect contact info), 1: CC_LAST_SUBSTEP (collect only contacts on last substep), 2: CC_ALL_SUBSTEPS (broken - do not use!)
+
+task:
+  randomize: False

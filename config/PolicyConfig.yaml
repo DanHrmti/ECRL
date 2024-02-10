@@ -1,0 +1,73 @@
+# Policy Configuration
+
+ECRL:
+  
+  State:
+    actor_class: EITActor
+    critic_class: EITCritic
+    actor_kwargs:
+      h_dim: 256
+      embed_dim: 64
+      n_head: 8
+      masking: False
+      goal_cond: True
+    critic_kwargs:
+      action_particle: True
+    n_critics: 2
+
+  Image:
+    actor_class: EITActor
+    critic_class: EITCritic
+    actor_kwargs:
+      h_dim: 256
+      embed_dim: 64
+      n_head: 8
+      masking: True  # if using slot-attention, set to False
+      goal_cond: True
+    critic_kwargs:
+      action_particle: True
+    n_critics: 2
+
+########################################################################################################################
+
+SMORL:
+  
+  State:
+    actor_class: SMORLActor
+    critic_class: SMORLCritic
+    actor_kwargs:
+      h_dim: 256
+      embed_dim: 32
+      n_head: 4
+      masking: False
+    n_critics: 2
+
+  Image:
+    actor_class: SMORLActor
+    critic_class: SMORLCritic
+    actor_kwargs: 
+      h_dim: 256
+      embed_dim: 64
+      n_head: 8
+      masking: True
+    n_critics: 2
+
+########################################################################################################################
+
+Unstructured:
+  
+  State:
+    actor_class: MLPActor
+    critic_class: MLPCritic
+    actor_kwargs:
+      n_hidden_layers: 3
+      h_dim: 256
+    n_critics: 2
+
+  Image:
+    actor_class: MLPActor
+    critic_class: MLPCritic
+    actor_kwargs:
+      n_hidden_layers: 3
+      h_dim: 256
+    n_critics: 2
