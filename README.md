@@ -14,8 +14,8 @@ Tal Daniel and Aviv Tamar.
     <a href="https://avivt.github.io/avivt/">Aviv Tamar</a>
   </h3>
 
-<h3 align="center">*ICLR 2024 - Spotlight (top 5%)*</h3>
-<h4 align="center">*Goal-Conditioned Reinforcement Learning Workshop, NeurIPS 2023 - Spotlight*</h4>
+<h3 align="center">ICLR 2024 - Spotlight (top 5%)</h3>
+<h4 align="center">Goal-Conditioned Reinforcement Learning Workshop, NeurIPS 2023 - Spotlight</h4>
 
 <h4 align="center">
     <a href="https://sites.google.com/view/entity-centric-rl/ecrl">Project Website</a> •
@@ -23,7 +23,7 @@ Tal Daniel and Aviv Tamar.
     <a href="https://openreview.net/forum?id=uDxeSZ1wdI">OpenReview</a>
 </h4>
 
-<h6 align="center">*Zero-Shot Generalization from 3 to 12 Objects*</h6>
+<h6 align="center">Zero-Shot Generalization from 3 to 12 Objects</h6>
 <p align="center">
   <img src="media/sort_push_video.gif" height="140"> &nbsp; &nbsp;
   <img src="media/sort_push_train_goal.png" height="140"> &nbsp; &nbsp;
@@ -42,7 +42,7 @@ Tal Daniel and Aviv Tamar.
 > We further relate our architecture to the generalization capability of the trained agent,
 > and demonstrate agents that learn with 3 objects but generalize to similar tasks with over 10 objects.*
 
-<h6 align="center">*In the Eyes of the Agent*</h6>
+<h6 align="center">In the Eyes of the Agent</h6>
 <p align="center">
   <img src="media/3c_dlp_vis_goal_front.png" height="140"> &nbsp; &nbsp;
   <img src="media/3c_dlp_vis_video_front.gif" height="170"> &nbsp; &nbsp;
@@ -80,7 +80,7 @@ follow the installation instructions in the documentation.
 
 ## 2. Environments
 
-<h6 align="center">*Environments*</h6>
+<h6 align="center">Environments</h6>
 <p align="center">
   <img src="media/environments.png" height="140">
 </p>
@@ -122,7 +122,7 @@ and `collectDataNumTimesteps` in the relevant `Config.yaml`. This will save a `.
 2. Process the data into a dataset by running `dlp2/datasets/process_dlp_data.py` (fill in the relevant paths in the beginning of the script).
 3. Configure `config/TrainDLPConfig.yaml` and run `train_dlp.py`.
 
-<h6 align="center">*DLP Decomposition*</h6>
+<h6 align="center">DLP Decomposition</h6>
 <p align="center">
   <img src="media/dlp_decomp.png" height="400">
 </p>
@@ -143,7 +143,7 @@ and fill in your username in the `wandb.init(entity="")` line in the `main.py` s
 
 Agent model checkpoints and intermediate results are saved in the `model_chkpts` and `results` directories respectively.
 
-<h6 align="center">*EIT Architecture Outline*</h6>
+<h6 align="center">EIT Architecture Outline</h6>
 <p align="center">
   <img src="media/eit_arch.png" height="400">
 </p>
@@ -159,7 +159,7 @@ _Cube Sorting_: train on `config/n_cubes` with `numObjects: 3` and evaluate on `
 
 _Different Number of Cubes than in Training_: train on `config/generalization_num_cubes` with `numObjects: 3` and evaluate with same config and varying number of objects.
 
-<h6 align="center">*Zero-Shot Generalization from 3 to 6 Objects*</h6>
+<h6 align="center">Zero-Shot Generalization from 3 to 6 Objects</h6>
 <p align="center">
   <img src="media/6c_generalization_goal.png" height="140"> &nbsp; &nbsp;
   <img src="media/6c_generalization.gif" height="170"> &nbsp; &nbsp;
