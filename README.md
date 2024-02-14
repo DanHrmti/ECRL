@@ -42,6 +42,19 @@ Tal Daniel and Aviv Tamar.
 > We further relate our architecture to the generalization capability of the trained agent,
 > and demonstrate agents that learn with 3 objects but generalize to similar tasks with over 10 objects.*
 
+## Citation
+
+Haramati, Dan, Tal Daniel, and Aviv Tamar. "Entity-Centric Reinforcement Learning for Object Manipulation from Pixels." Proceedings of the Twelfth International Conference on Learning Representations (ICLR). 2024.
+>	
+     @inproceedings{
+     haramati2024entitycentric,
+     title={Entity-Centric Reinforcement Learning for Object Manipulation from Pixels},
+     author={Dan Haramati and Tal Daniel and Aviv Tamar},
+     booktitle={The Twelfth International Conference on Learning Representations},
+     year={2024},
+     url={https://openreview.net/forum?id=uDxeSZ1wdI}
+     }
+
 <h6 align="center">In the Eyes of the Agent</h6>
 <p align="center">
   <img src="media/3c_dlp_vis_goal_front.png" height="140"> &nbsp; &nbsp;
