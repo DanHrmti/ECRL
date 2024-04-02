@@ -19,7 +19,7 @@ Tal Daniel and Aviv Tamar.
 
 <h4 align="center">
     <a href="https://sites.google.com/view/entity-centric-rl/ecrl">Project Website</a> •
-    <a href="">arXiv</a> •
+    <a href="https://arxiv.org/abs/2404.01220">arXiv</a> •
     <a href="https://openreview.net/forum?id=uDxeSZ1wdI">OpenReview</a>
 </h4>
 
@@ -39,7 +39,7 @@ Tal Daniel and Aviv Tamar.
 > In this work we propose a structured approach for visual RL that is suitable for representing multiple objects and their interaction,
 > and use it to learn goal-conditioned manipulation of several objects.
 > Key to our method is the ability to handle goals with dependencies between the objects (e.g., moving objects in a certain order).
-> We further relate our architecture to the generalization capability of the trained agent,
+> We further relate our architecture to the generalization capability of the trained agent, based on a theoretical result for compositional generalization,
 > and demonstrate agents that learn with 3 objects but generalize to similar tasks with over 10 objects.*
 
 ## Citation
@@ -82,7 +82,7 @@ The following are the main libraries required to run this code:
 | Library             | Version |
 |---------------------|---------|
 | `Python`            | `3.8`   |
-| `torch`             | `2.0.1` |
+| `torch`             | `2.1.2` |
 | `stable-baselines3` | `1.5.0` |
 | `isaacgym`          |         |
 
@@ -108,7 +108,7 @@ We consider two possible goal configurations: red cube in the rear of the corrid
 This task requires to fulfill the goals in a certain order, otherwise the agent fails (pulling a block out of the corridor is not possible). \
 `Small-Table`: A `3-Cubes` setting where the table is substantially smaller.
 This task requires to accurately account for all objects in the scene at all times, to avoid pushing blocks off the table. \
-`Push-T`: Push T-shaped blocks to a goal **orientation**.
+`Push-2T`: Push 2 T-shaped blocks to a single goal **orientation**.
 
 A configuration file for each environment, `IsaacPandaPushConfig.yaml`, is provided in the corresponding directory in `config`.
 
@@ -130,7 +130,7 @@ Download and place in the relevant directory in `latent_rep_chkpts`
 (e.g., checkpoint of DLP trained on data from the `5-Cubes` environment should be placed in `latent_rep_chkpts/dlp_push_5C`).
 
 In order to retrain the model:
-1. Collect image data using a random policy by running `main.py <configuration_dir>` with the desired environment (e.g, `main.py config/n_cubes`), setting `collectData: True`
+1. Collect image data using a random policy by running `main.py -c <configuration_dir>` with the desired environment (e.g, `main.py -c config/n_cubes`), setting `collectData: True`
 and `collectDataNumTimesteps` in the relevant `Config.yaml`. This will save a `.npy` file in the `results` directory.
 2. Process the data into a dataset by running `dlp2/datasets/process_dlp_data.py` (fill in the relevant paths in the beginning of the script).
 3. Configure `config/TrainDLPConfig.yaml` and run `train_dlp.py`.
@@ -142,7 +142,7 @@ and `collectDataNumTimesteps` in the relevant `Config.yaml`. This will save a `.
 
 ### RL Training
 
-Run `main.py <configuration_dir>` with the desired configuration (e.g, `main.py config/n_cubes`). \
+Run `main.py -c <configuration_dir>` with the desired configuration (e.g, `main.py -c config/n_cubes`). \
 `Config.yaml` contains agent and training parameters and `IsaacPandaPushConfig.yaml` contains environment parameters. \
 \
 In order to reproduce the experiments in the paper, input the corresponding configuration directory.
