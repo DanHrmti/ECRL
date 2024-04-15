@@ -10,7 +10,7 @@ Tal Daniel and Aviv Tamar.
 </h1>
   <h3 align="center">
     <a href="https://danhrmti.github.io/">Dan Haramati</a> •
-    <a href="https://taldatech.github.io">Tal Daniel</a> •
+    <a href="https://taldatech.github.io/">Tal Daniel</a> •
     <a href="https://avivt.github.io/avivt/">Aviv Tamar</a>
   </h3>
 
@@ -18,7 +18,7 @@ Tal Daniel and Aviv Tamar.
 <h4 align="center">Goal-Conditioned Reinforcement Learning Workshop, NeurIPS 2023 - Spotlight</h4>
 
 <h4 align="center">
-    <a href="https://sites.google.com/view/entity-centric-rl/ecrl">Project Website</a> •
+    <a href="https://sites.google.com/view/entity-centric-rl/">Project Website</a> •
     <a href="https://arxiv.org/abs/2404.01220">arXiv</a> •
     <a href="https://openreview.net/forum?id=uDxeSZ1wdI">OpenReview</a>
 </h4>
