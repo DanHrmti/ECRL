@@ -9,7 +9,7 @@ Tal Daniel and Aviv Tamar.
   <br>
 </h1>
   <h3 align="center">
-    <a href="https://www.linkedin.com/in/dan-haramati/">Dan Haramati</a> •
+    <a href="https://danhrmti.github.io/">Dan Haramati</a> •
     <a href="https://taldatech.github.io">Tal Daniel</a> •
     <a href="https://avivt.github.io/avivt/">Aviv Tamar</a>
   </h3>
