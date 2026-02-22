@@ -3,6 +3,14 @@
 Official PyTorch code release of the paper "*Entity-Centric Reinforcement Learning for Object Manipulation from Pixels*" by Dan Haramati,
 Tal Daniel and Aviv Tamar.
 
+----
+
+### **Offline RL Variant Release (Feb 2026)**
+
+An offline variant of ECRL implemented with IQL can be found in our follow-up work on [Hierarchical ECRL (HECRL)](https://github.com/DanHrmti/HECRL).
+
+----
+
 <h1 align="center">
   <br>
 	Entity-Centric Reinforcement Learning for Object Manipulation from Pixels
